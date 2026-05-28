@@ -1,6 +1,9 @@
 package com.abi0711.pixelartmeetup;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,16 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        PixelGridView gridView = findViewById(R.id.myCustomGrid);
+
+        gridView.setOnGridClickListener(new PixelGridView.OnGridClickListener() {
+            @Override
+            public void onCellClick(int row, int col) {
+                Toast.makeText(MainActivity.this,
+                        "Clicked cell at: [" + row + ", " + col + "]",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }
