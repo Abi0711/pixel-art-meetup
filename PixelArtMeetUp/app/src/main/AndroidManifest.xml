@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PixelArtMeetUp">
         <activity
+            android:name=".DragGesture"
+            android:exported="true"
+            android:label="@string/title_activity_drag_gesture"
+            android:theme="@style/Theme.PixelArtMeetUp" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -20,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

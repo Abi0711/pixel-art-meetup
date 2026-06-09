@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pixel Art Meet Up</string>
+    <string name="title_activity_drag_gesture">DragGesture</string>
 </resources>

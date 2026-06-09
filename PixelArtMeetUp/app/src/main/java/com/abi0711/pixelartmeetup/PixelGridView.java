@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import java.util.Arrays;
 
 /**
- * TODO: document your custom view class.
+ *
  */
 public class PixelGridView extends View {
     private int rows = 8;
@@ -52,6 +52,10 @@ public class PixelGridView extends View {
         for (int[] row : gridColour) {
             Arrays.fill(row, -1);
         }
+    }
+
+    public void setGridColour(int[][] gridColour) {
+        this.gridColour = gridColour;
     }
 
     @Override
@@ -133,7 +137,7 @@ public class PixelGridView extends View {
 
     // Custom interface to pass click data back to your Activity/Fragment
     public interface OnGridClickListener {
-        void onCellClick(int row, int col);
+        void onCellClick(int row, int col, int colour);
     }
 
     private OnGridClickListener gridClickListener;
